@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Tut</title>
+   </head>
+   <body>
+      <form method="POST" novalidate>
+         {%csrf_token%}
+         {{form.captcha}}
+         <input type="submit" value="submit">
+
+         {% for message in messages %}
+            <h3> {{message}}  </h3>
+        {% endfor %}
+      </form>
+   </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <form action="register" method="post">
+            {% csrf_token %}
+            
+            <input type="text" name="first_name" placeholder="First Name"><br>
+            <input type="text" name="last_name" placeholder="Last Name"><br>
+            <input type="text" name="phoneNo" placeholder="Phone Number"><br>
+            <input type="date" name="dob" placeholder="Date of birth"><br>
+            <select name="UserType" id="UserType">
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            <input type="submit" ><br>
+    </body>
+</html>

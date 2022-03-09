@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <form action="login" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="phoneNo" placeholder="Phone Number"><br><br>
+        <input type="date" name="dob" placeholder="DOB"><br><br>
+        
+
+        {{form.captcha}}   <br><br>
+
+
+        <input type="submit" value="Login"><br><br>
+    </form>
+
+    <div>
+        {% for message in messages %}
+            <h3> {{message}}  </h3>
+        {% endfor %}
+    </div>
+</body>
+
+<!-- <form method="POST" novalidate>
+    {%csrf_token%}
+    {{form.captcha}}
+    <input type="submit" value="submit">
+
+    {% for message in messages %}
+       <h3> {{message}}  </h3>
+   {% endfor %}
+ </form>
+
+</html> -->
